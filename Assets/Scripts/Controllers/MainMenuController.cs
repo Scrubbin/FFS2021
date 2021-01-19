@@ -1,12 +1,14 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
     private AsyncOperation loadGame;
 
     public TextMeshProUGUI startText;
+    public GameObject saveButton;
 
     private Scene activeScene;
     // Start is called before the first frame update
@@ -23,6 +25,12 @@ public class MainMenuController : MonoBehaviour
         if (activeScene.Equals(SceneManager.GetSceneByName("Game")))
         {
             startText.SetText("RESUME");
+            saveButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            startText.SetText("NEW GAME");
+            saveButton.GetComponent<Button>().interactable = false;
         }
     }
 
@@ -39,7 +47,8 @@ public class MainMenuController : MonoBehaviour
             DontDestroyOnLoad(this);
             loadGame = SceneManager.LoadSceneAsync("Game");
             Time.timeScale = 1;
-            Destroy(gameObject.transform.GetChild(4).gameObject);
+            Destroy(transform.Find("Main Camera").gameObject);
+
         }
         else
         {
