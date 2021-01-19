@@ -58,13 +58,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\InputController.cs" />
-     <Compile Include="Assets\Scripts\MainMenuController.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\ShipBuilder.cs" />
-     <Compile Include="Assets\Scripts\ShipController.cs" />
-     <Compile Include="Assets\Scripts\ShipRoom.cs" />
-     <Compile Include="Assets\Scripts\UIController.cs" />
+     <Compile Include="Assets\LoadController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\InputController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MainMenuController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\PlayerInvController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\UIController.cs" />
+     <Compile Include="Assets\Scripts\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Items\Food.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\Resource.cs" />
+     <Compile Include="Assets\Scripts\Ships\ShipBuilder.cs" />
+     <Compile Include="Assets\Scripts\Ships\ShipController.cs" />
+     <Compile Include="Assets\Scripts\Ships\ShipRoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
