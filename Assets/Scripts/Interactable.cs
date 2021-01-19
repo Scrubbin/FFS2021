@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public PlayerInvController inv;
+    protected PlayerInvController inv;
     void Start()
     {
         inv = GameObject.Find("GameC").GetComponent<PlayerInvController>();
@@ -12,7 +12,6 @@ public class Interactable : MonoBehaviour
     public virtual void Interact()
     {
         //overwrite in child classes
-        Debug.Log("In interact function");
     }
 
 }

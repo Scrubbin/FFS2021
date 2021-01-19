@@ -25,7 +25,8 @@ namespace Controllers
         void Update()
         {
             var menuInput = Input.GetAxisRaw("Menu");
-            if (menuInput == 0)
+            var invInput = Input.GetAxisRaw("Inventory");
+            if (menuInput == 0 && invInput == 0)
             {
                 buttonHeld = false;
             }
@@ -44,6 +45,10 @@ namespace Controllers
                     menu.SetActive(false);
                 }
             
+            } else if (invInput > 0 && buttonHeld == false)
+            {
+                buttonHeld = true;
+                //TODO open inventory
             } 
         }
     }

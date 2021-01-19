@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LoadController.cs" />
      <Compile Include="Assets\Scripts\Controllers\InputController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainMenuController.cs" />
      <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\Items\Food.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\Resource.cs" />
      <Compile Include="Assets\Scripts\Ships\ShipBuilder.cs" />
      <Compile Include="Assets\Scripts\Ships\ShipController.cs" />
      <Compile Include="Assets\Scripts\Ships\ShipRoom.cs" />
