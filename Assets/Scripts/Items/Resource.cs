@@ -3,9 +3,9 @@
     public class Resource : Item
     {
         public int amount;
-        public Resource(string itemName, string desc, int amount)
+        public Resource(string name, string desc, int amount)
         {
-            this.itemName = itemName;
+            this.name = name;
             this.desc = desc;
             this.amount = amount;
         }

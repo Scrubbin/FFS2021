@@ -9,6 +9,7 @@ namespace Controllers
         private GameObject UI;
 
         private GameObject menu;
+        private GameObject playerInv;
 
         private bool buttonHeld;
         // Start is called before the first frame update
@@ -17,6 +18,8 @@ namespace Controllers
             player = GameObject.Find("Player");
             UI = GameObject.Find("UI");
             menu = GameObject.Find("MenuCanvas");
+            playerInv = GameObject.Find("Inventory");
+            playerInv.SetActive(false);
             menu.SetActive(false);
             buttonHeld = false;
         }
@@ -34,21 +37,15 @@ namespace Controllers
             if (menuInput > 0 && buttonHeld == false)
             {
                 buttonHeld = true;
-                if (menu.activeSelf == false)
-                {
-                    Time.timeScale = 0;
-                    menu.SetActive(true); 
-                }
-                else
-                {
-                    Time.timeScale = 1;
-                    menu.SetActive(false);
-                }
-            
+                int pause = menu.activeSelf ? 1 : 0;
+                menu.SetActive(!menu.activeSelf);
+                Time.timeScale = pause;
+
             } else if (invInput > 0 && buttonHeld == false)
             {
                 buttonHeld = true;
-                //TODO open inventory
+                playerInv.SetActive(!playerInv.activeSelf);
+                
             } 
         }
     }

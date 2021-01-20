@@ -16,6 +16,7 @@ namespace Controllers
         // Start is called before the first frame update
         void Start()
         {
+            GameObject.Find("Version").GetComponent<TextMeshProUGUI>().SetText("v " + Application.version);
             activeScene = SceneManager.GetActiveScene();
         }
 
